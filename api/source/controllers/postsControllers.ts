@@ -8,7 +8,7 @@ interface Post {
     body: String;
 }
 
-const getPosts = async (req: Request, res: Response, next: NextFunction) => {
+const getEvents = async (req: Request, res: Response, next: NextFunction) => {
     let result: AxiosResponse = await axios.get('https://jsonplaceholder.typicode.com/posts');
     let posts: [Post] = result.data;
     return res.status(200).json({
@@ -16,4 +16,12 @@ const getPosts = async (req: Request, res: Response, next: NextFunction) => {
     });
 };
 
-export default { getPosts };
+const getParteners = async (req: Request, res: Response, next: NextFunction) => {
+    let result: AxiosResponse = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    let posts: [Post] = result.data;
+    return res.status(200).json({
+        message: posts
+    });
+};
+
+export default { getEvents , getParteners };
