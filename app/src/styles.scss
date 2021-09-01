@@ -1,3 +1,38 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$agoraPS-primary: mat.define-palette(mat.$indigo-palette);
+$agoraPS-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$agoraPS-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$agoraPS-theme: mat.define-light-theme((
+  color: (
+    primary: $agoraPS-primary,
+    accent: $agoraPS-accent,
+    warn: $agoraPS-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($agoraPS-theme);
+
 @import "assets/scss/variable";
 
 * {
@@ -14,19 +49,27 @@ a {
   color: $font-white-color;
 }
 
+h1{
+  line-height: 5rem !important;
+}
 
 .link-contact{
   padding: 1rem 2.8rem;
   font-size: 1.8rem;
   background-color: $button-red-color;
   border-radius: 1.6rem;
+  color: white;
 }
 
 .title_secondary{
-  font-size: 4rem;
-  font-weight: 100;
+  font-size: 4rem !important;
+  font-weight: 400 !important;
   color: $title-red-color;
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
+  line-height: 4rem !important;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

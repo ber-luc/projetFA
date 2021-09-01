@@ -6,10 +6,10 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      {
-        path: 'admin',
-        loadChildren: () => import('./back-office/back-office.module').then(m => m.BackOfficeModule)
-      },
+      //{
+        //path: 'admin',
+        //loadChildren: () => import('./back-office/back-office.module').then(m => m.BackOfficeModule)
+      //},
       {
         path:'',
         pathMatch:'full',

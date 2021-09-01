@@ -1,0 +1,48 @@
+@import '../../../assets/scss/variable';
+
+.page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.page_connexion{
+  width: 75%;
+  min-height: 50rem;
+  min-width: 30rem;
+  background-color: $font-backoffice-grey-color;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border: 2px solid $button-red-color;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  &__content{
+    margin: 5rem;
+    &__button{
+      margin-top: 4rem;
+    }
+  }
+}
+
+
+.title{
+  font-size: 3.2rem;
+  font-weight: 100;
+  margin: 0.8rem 0;
+}
+
+.subtitle{
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 1.6rem 0 0.4rem 0;
+}
+
+.input__connexion{
+  height: 2.4rem;
+  width: 15rem;
+  font-weight: 100;
+  font-size: 1.6rem;
+  padding: 0 1rem;
+  border: none;
+  outline-color: $background-Or-color;
+}

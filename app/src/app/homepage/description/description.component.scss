@@ -1,0 +1,57 @@
+.description{
+  max-width: 100rem;
+  margin: 10rem auto;
+  &__article {
+    display: flex;
+    &_column {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      img {
+        margin: 1.6rem;
+      }
+    }
+    &_text{
+      font-size: 1.8rem;
+      margin: 0.4rem 5rem;
+      line-height: 2.4rem;
+      opacity: 80%;
+    }
+  }
+}
+
+.margin_inter_column{
+  &_img{
+    margin-left: 2.4rem;
+    margin-bottom: 10rem;
+  }
+  &_text{
+    margin: auto;
+  }
+  &_text2{
+    margin-top: -10rem;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .description__article{
+    display: block;
+    &_column{
+      max-width: 100%;
+    }
+  }
+  .margin_inter_column{
+    &_img{
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    &_text{
+      margin: auto;
+    }
+    &_text2{
+      margin-top: 0rem;
+    }
+  }
+
+}
